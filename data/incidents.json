@@ -1,1 +1,62 @@
-
+[
+  {
+    "id": 1,
+    "incident": "Payment service database timeout",
+    "symptoms": "Payment error rate increased to 18%. Database connection timeouts are increasing. One payment pod is unhealthy.",
+    "root_cause": "Database connection pool exhaustion",
+    "blast_radius": "Single service",
+    "remediation": "Retry database connection and restart unhealthy pod",
+    "outcome": "Payment service recovered",
+    "confidence": 94
+  },
+  {
+    "id": 2,
+    "incident": "Single application pod crash",
+    "symptoms": "One application pod repeatedly crashes while other pods remain healthy.",
+    "root_cause": "Temporary application process failure",
+    "blast_radius": "Single pod",
+    "remediation": "Restart Service",
+    "outcome": "Pod became healthy after restart",
+    "confidence": 96
+  },
+  {
+    "id": 3,
+    "incident": "High CPU usage",
+    "symptoms": "Application CPU usage reached 95% and response latency increased.",
+    "root_cause": "Insufficient service capacity",
+    "blast_radius": "Single service",
+    "remediation": "Scale Service",
+    "outcome": "CPU and latency returned to normal",
+    "confidence": 91
+  },
+  {
+    "id": 4,
+    "incident": "Network connection failure",
+    "symptoms": "Application requests to a downstream service are timing out.",
+    "root_cause": "Network connectivity problem",
+    "blast_radius": "Single service",
+    "remediation": "Retry Connection",
+    "outcome": "Connection recovered",
+    "confidence": 88
+  },
+  {
+    "id": 5,
+    "incident": "Multi-service customer outage",
+    "symptoms": "Payment, authentication, and order services are failing simultaneously. Customer requests are returning errors.",
+    "root_cause": "Shared infrastructure dependency failure",
+    "blast_radius": "Multi-service / customer-facing",
+    "remediation": "Human Approval",
+    "outcome": "Escalated to DevOps Engineer",
+    "confidence": 78
+  },
+  {
+    "id": 6,
+    "incident": "Memory exhaustion",
+    "symptoms": "Application memory usage reached 96% and pods are restarting.",
+    "root_cause": "Memory exhaustion",
+    "blast_radius": "Single service",
+    "remediation": "Scale Service",
+    "outcome": "Memory usage returned to normal",
+    "confidence": 93
+  }
+]
